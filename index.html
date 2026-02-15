@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Pro - Tailwind v4</title>
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-zinc-950 flex items-center justify-center min-h-screen">
+
+    <div class="w-full h-screen md:h-auto md:max-w-[360px] bg-black p-6 flex flex-col justify-end md:justify-start md:rounded-[3rem] md:shadow-2xl md:border-8 md:border-zinc-900">
+        
+        <div class="mb-6 px-4 py-10">
+            <input type="text" id="display" readonly 
+                class="w-full bg-transparent text-right text-zinc-300 text-7xl font-light outline-none" 
+                placeholder="0">
+        </div>
+
+        <div class="grid grid-cols-4 gap-4">
+            
+            <button onclick="clearDisplay()" class="aspect-square rounded-full bg-zinc-300 text-black text-2xl font-medium hover:bg-zinc-200 active:scale-90 transition-all">C</button>
+            <button onclick="deleteLast()" class="aspect-square rounded-full bg-zinc-300 text-black text-sm font-medium hover:bg-zinc-200 active:scale-90 transition-all">DEL</button>
+            <button onclick="appendValue('%')" class="aspect-square rounded-full bg-zinc-300 text-black text-2xl font-medium hover:bg-zinc-200 active:scale-90 transition-all">%</button>
+            <button onclick="appendValue('/')" class="aspect-square rounded-full bg-orange-500 text-white text-3xl font-bold hover:bg-orange-400 active:scale-90 transition-all">÷</button>
+
+            <button onclick="appendValue('7')" class="aspect-square rounded-full bg-zinc-800 text-white text-3xl hover:bg-zinc-700 active:scale-90 transition-all">7</button>
+            <button onclick="appendValue('8')" class="aspect-square rounded-full bg-zinc-800 text-white text-3xl hover:bg-zinc-700 active:scale-90 transition-all">8</button>
+            <button onclick="appendValue('9')" class="aspect-square rounded-full bg-zinc-800 text-white text-3xl hover:bg-zinc-700 active:scale-90 transition-all">9</button>
+            <button onclick="appendValue('*')" class="aspect-square rounded-full bg-orange-500 text-white text-3xl font-bold hover:bg-orange-400 active:scale-90 transition-all">×</button>
+
+            <button onclick="appendValue('4')" class="aspect-square rounded-full bg-zinc-800 text-white text-3xl hover:bg-zinc-700 active:scale-90 transition-all">4</button>
+            <button onclick="appendValue('5')" class="aspect-square rounded-full bg-zinc-800 text-white text-3xl hover:bg-zinc-700 active:scale-90 transition-all">5</button>
+            <button onclick="appendValue('6')" class="aspect-square rounded-full bg-zinc-800 text-white text-3xl hover:bg-zinc-700 active:scale-90 transition-all">6</button>
+            <button onclick="appendValue('-')" class="aspect-square rounded-full bg-orange-500 text-white text-3xl font-bold hover:bg-orange-400 active:scale-90 transition-all">−</button>
+
+            <button onclick="appendValue('1')" class="aspect-square rounded-full bg-zinc-800 text-white text-3xl hover:bg-zinc-700 active:scale-90 transition-all">1</button>
+            <button onclick="appendValue('2')" class="aspect-square rounded-full bg-zinc-800 text-white text-3xl hover:bg-zinc-700 active:scale-90 transition-all">2</button>
+            <button onclick="appendValue('3')" class="aspect-square rounded-full bg-zinc-800 text-white text-3xl hover:bg-zinc-700 active:scale-90 transition-all">3</button>
+            <button onclick="appendValue('+')" class="aspect-square rounded-full bg-orange-500 text-white text-3xl font-bold hover:bg-orange-400 active:scale-90 transition-all">+</button>
+
+            <button onclick="appendValue('0')" class="col-span-2 rounded-full bg-zinc-800 text-white text-3xl text-left px-8 hover:bg-zinc-700 active:scale-95 transition-all">0</button>
+            <button onclick="appendValue('.')" class="aspect-square rounded-full bg-zinc-800 text-white text-3xl hover:bg-zinc-700 active:scale-90 transition-all">.</button>
+            <button onclick="calculate()" class="aspect-square rounded-full bg-orange-500 text-white text-3xl font-bold hover:bg-orange-400 active:scale-90 transition-all">=</button>
+
+        </div>
+    </div>
+
+    <script src="./src/js/responsive.js"></script>
+</body>
+</html>
